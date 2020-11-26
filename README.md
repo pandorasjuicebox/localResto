@@ -1,7 +1,7 @@
 # Supported Local Restaurants in Manitoba
 An API that will provide you with general information about restaurants in Manitoba.  
 
-The API will return a list of supported cities within Manitoba that in turn will provide a list of local restaurants (restaurant name, location) for the selected cities. In addition to this, the API can return the opening and closing times of supported restaurants with their city names, restaurant names, and a boolean indicating whether or not they are open at midnight. The APIs can also return a list of supported restaurants including their cuisine types and the city they are in.
+The API will return a list of list of local restaurants (restaurant name, location) for the selected cities. In addition to this, the API can return the opening and closing times of supported restaurants with their city names, restaurant names, and a boolean indicating whether or not they are open at midnight. The APIs can also return a list of supported restaurants including their cuisine types and the city they are in.
 
 ## API documentation
 Our API is a simple API, which only uses GET requests to access the information. You can perform the GET request at:
@@ -15,12 +15,9 @@ The API will have three endpoints, and the information is about the three endpoi
 - **city**: Access to a list of supported cities with the local restaurants.
   - **parameter**
     - ```id (string)```: id of city. Required.
-    - ```Name(string)```: Name of city. Required
-    - ```restaurant(array)``` : Returns a list of local restaurants in the supported city. Optional
+    - ```Name(string)```: Name of Restaurant. Optional
+    - ```Delivery(boolean)```: Indicate if the restaurant deliver or not. Required.
     - ```verson(int)```: Indicates how many copies the user want to get. Optional.
-- **city/restaurant** : Returns a list of local restaurants in supported city.
-  - **parameter**
-    - ```Name(string)```: Name of the restaurant.
 
 ### Time
   - **time**: Access the list of opening and closing times for supported restaurants. You only need to input the city's id, restaurant's name and the boolean condition (true, if looking for restaurants open at midnight). 
@@ -31,7 +28,7 @@ The API will have three endpoints, and the information is about the three endpoi
     - ```support_overnight(boolean)```: Boolean to check if the restaurant will be open overnight. Optional.
 
 ### Cuisine
-  - **cuisine**: Access the list of cuisines of the supported city. You only need to input the cuisine name, city id, version. Required.
+  - **cuisine**: Access the list of cuisines of the supported city and return the list of restaurant from that cuisin. You only need to input the cuisine name, city id, version. Required.
   - **parameter**
     - ```id (string)```: The id of the city. Required.
       * *For example: "id":"WPG"* means Winnipeg.
@@ -44,17 +41,16 @@ The API will have three endpoints, and the information is about the three endpoi
   * Browser version -
 
     ```
-    http://apis.localrestaurant.com/cities/json?id=WPG&Name=Winnipeg&restaurant=[name=fion]&version=1
-    http://apis.localrestaurant.com/cities/json?id=WPG&Name=Winnipeg&version=1
-    http://apis.localrestaurant.com/cities/json?id=WPG&Name=Winnipeg
+    http://apis.localrestaurant.com/restaurants/json?id=WPG&Name=Fion&delivery=true&version=1
+    http://apis.localrestaurant.com/restaurants/json?id=WPG
     ```
   * JSON file version -
     ```
     [
         {
           "id": "WPG"
-          "Name": "Winnipeg"
-          "restaurant":["Name":"Fions"]
+          "Name": "Fion"
+          "delivery":true
           "version": 1
       }
     ]
