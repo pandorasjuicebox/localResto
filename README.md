@@ -17,7 +17,7 @@ The API will have three endpoints, and the information is about the three endpoi
     - ```id (string)```: id of city. Required.
     - ```Name(string)```: Name of Restaurant. Optional
     - ```Delivery(boolean)```: Indicate if the restaurant deliver or not. Required.
-    - ```verson(int)```: Indicates how many copies the user want to get. Optional.
+    - ```Version(int)```: Indicates how many copies the user want to get. Optional.
 
 ### Time
   - **time**: Access the list of opening and closing times for supported restaurants. You only need to input the city's id, restaurant's name and the boolean condition (true, if looking for restaurants open at midnight). 
@@ -33,7 +33,7 @@ The API will have three endpoints, and the information is about the three endpoi
     - ```id (string)```: The id of the city. Required.
       * *For example: "id":"WPG"* means Winnipeg.
     - ```Name (string)```: The name of the cuisine you want to search. Required.
-    - ```version (int)```: Indicate how many copies it should return. Required.
+    - ```Version (int)```: Indicate how many copies it should return. Required.
 
 ## Sample requests
 
