@@ -12,7 +12,7 @@ https://apis.localrestaurant.com
 ## Endpoints and Parameters
 The API will have three endpoints, and the information is about the three endpoints within their parameters.
 ### Restaurant
-- **restaurant**: Access to a list of restaurants in the given city and return the list of local restaurants.
+- **restaurants**: Access to a list of restaurants in the given city and return the list of local restaurants.
   - **parameter**
     - ```id (string)```: id of city. Required.
     - ```Name(string)```: Name of Restaurant. Optional
