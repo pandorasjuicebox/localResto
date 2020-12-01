@@ -66,7 +66,7 @@ The API will have three endpoints, and the information is about the three endpoi
     ```
     [
       {
-        "Id": "Winnipeg, Manitoba Central Time",
+        "Id": "WPG",
         "Name": "King's Head Pub",
         "support_overnight": "false"
       }
