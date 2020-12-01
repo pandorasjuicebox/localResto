@@ -23,7 +23,7 @@ The API will have three endpoints, and the information is about the three endpoi
   - **time**: Access the list of opening and closing times for supported restaurants. You only need to input the city's id, restaurant's name and the boolean condition (true, if looking for restaurants open at midnight). 
   - **parameter**
     - ```id (string)```: id of city with specific time type. Required
-      * *For example: "id": "Winnipeg, Manitoba, Central Time"*
+      * *For example: "id": "WPG"*
     - ```Name (string)```: Name of the restaurant. Required.
     - ```support_overnight(boolean)```: Boolean to check if the restaurant will be open overnight. Optional.
 
